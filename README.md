@@ -1,5 +1,3 @@
-# day7-task
-
 /*
     https://restcountries.com/v3.1/all
 */
@@ -61,6 +59,8 @@
 //}   
 
 
+
+
 /*
     https://restcountries.com/v3.1/all
 */
@@ -75,18 +75,15 @@
 
 //xhr.onload = function () {
     //const countries = JSON.parse(xhr.response);
-    //console.log(countries.forEach(name => {
+    //(countries.forEach(countries => {
 
-        //console.log(countries);
+        //console.log(countries.name);
         
     //}));
         
 
     
 //};
-
-
-
 
 //const XMLHttpRequest = require('xhr2');
 
@@ -98,27 +95,38 @@
 
 //xhr.onload = function () {
     //const countries = JSON.parse(xhr.response);
-    //console.log(countries.forEach(capital => {
+    //(countries.forEach(countries => {
 
-        //console.log(countries.capital);
+        //console.log(countries.flag);
         
     //}));
         
 
-    //const XMLHttpRequest = require('xhr2');
-
-    //let xhr = new XMLHttpRequest();
-    
-    //xhr.open('GET', 'https://restcountries.com/v3.1/all');
-    
-    //xhr.send();
-    
-    //xhr.onload = function () {
-        //const countries = JSON.parse(xhr.response);
-        //console.log(countries.forEach(flag => {
-    
-            //console.log(countries.flag);
-            
-        //}));
     
 //};
+const XMLHttpRequest = require('xhr2');
+
+let xhr = new XMLHttpRequest();
+
+xhr.open('GET', 'https://restcountries.com/v3.1/all');
+
+xhr.send();
+
+xhr.onload = function () {
+    const countries = JSON.parse(xhr.response);
+    (countries.forEach(countries => {
+
+        console.log(countries.capital);
+        
+    }));
+        
+
+    
+};
+
+
+
+
+
+
+
